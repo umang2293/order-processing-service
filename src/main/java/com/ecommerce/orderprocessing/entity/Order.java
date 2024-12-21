@@ -1,4 +1,4 @@
-package com.ecommerce.orderprocessing;
+package com.ecommerce.orderprocessing.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

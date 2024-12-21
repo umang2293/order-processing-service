@@ -1,4 +1,4 @@
-package com.ecommerce.orderprocessing;
+package com.ecommerce.orderprocessing.dto;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
