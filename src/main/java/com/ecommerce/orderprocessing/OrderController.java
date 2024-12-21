@@ -1,5 +1,6 @@
 package com.ecommerce.orderprocessing;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
@@ -21,5 +22,10 @@ public class OrderController {
     @GetMapping("/async/{productId}")
     public Mono<String> getProductInfoAsync(@PathVariable Long productId) {
         return orderService.getProductInfoAsync(productId);
+    }
+
+    @GetMapping("/getOrder/{orderId}")
+    public ResponseEntity<Order> getOrder(@PathVariable Long orderId) {
+        return ResponseEntity.ok(orderService.getOrderById(orderId));
     }
 }
